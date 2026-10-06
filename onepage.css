@@ -105,3 +105,13 @@
 .cs-static .cs-cards{width:auto;height:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:16px;max-width:var(--wrap);margin:0 auto;padding-inline:clamp(16px,3vw,40px)}
 .cs-static .cs-card{position:relative;inset:auto}
 @media (max-width:640px){.cs-card{gap:16px}.cs-quote p{font-size:.875rem;line-height:1.55}}
+
+/* version switch in the contact footer */
+.op-foot{align-items:center}
+.op-foot .ver-switch{height:36px}
+.op-foot .vs-opt{height:28px}
+.op-foot .ver-switch{border-color:color-mix(in srgb,var(--paper) 22%,transparent);background:color-mix(in srgb,var(--paper) 6%,transparent)}
+.op-foot .vs-opt{color:color-mix(in srgb,var(--paper) 70%,transparent)}
+.op-foot a.vs-opt:hover{color:var(--paper);background:color-mix(in srgb,var(--paper) 12%,transparent)}
+.op-foot .vs-opt.is-on{background:var(--paper);color:var(--ink)}
+@media (max-width:640px){.op-foot .vs-opt>span{display:inline}}
