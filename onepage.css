@@ -1,0 +1,85 @@
+/* One-page portfolio: layout on top of styles.css (same tokens, fonts and components). */
+.op-page section{scroll-margin-top:84px}
+.op-talk{white-space:nowrap}
+
+/* Hero: huge role title, name in a Figma-style selection frame, photo on the right */
+.op-hero{padding-block:clamp(48px,7vw,96px) clamp(56px,7vw,96px)}
+.op-hero-in{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:clamp(32px,5vw,72px);align-items:end}
+.op-title{font-family:var(--f-display);font-size:clamp(3.2rem,10.5vw,9.5rem);line-height:.92;letter-spacing:-.045em;font-weight:600;margin:0;max-width:none}
+.op-name{margin:clamp(22px,3vw,34px) 0 0;font-family:var(--f-display);font-size:clamp(1.5rem,2.6vw,2.25rem);font-weight:500;letter-spacing:-.02em;line-height:1.2}
+.op-name .sel{color:var(--ink);padding:.1em .35em}
+.op-name .sel .dim{top:-2.1em}
+.op-sub{margin:18px 0 0;font-size:clamp(1.125rem,1.6vw,1.375rem);color:var(--muted)}
+.op-stats{list-style:none;margin:28px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:12px 36px;font-family:var(--f-display);font-size:clamp(1.125rem,1.7vw,1.5rem);font-weight:500}
+.op-stats b{font-weight:600}
+.op-lede{margin:28px 0 0;max-width:46ch;font-size:var(--s1);line-height:1.55;color:var(--muted)}
+.op-lede strong{color:var(--ink);font-weight:500}
+.op-hero .hero-cta{margin-top:32px}
+.op-photo{margin:0;position:relative;border-radius:calc(var(--r) * 1.6);overflow:hidden;border:1px solid var(--line);background:var(--surface);aspect-ratio:4/5}
+.op-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.op-photo figcaption{position:absolute;left:14px;bottom:14px;padding:6px 10px;border-radius:999px;background:color-mix(in srgb,var(--paper) 82%,transparent);backdrop-filter:blur(8px);font-size:var(--s-1);color:var(--ink)}
+
+/* Section heads */
+.op-head{display:grid;gap:14px;margin-bottom:clamp(28px,4vw,48px)}
+.op-h2{font-family:var(--f-display);font-size:clamp(2.75rem,7vw,6rem);line-height:.95;letter-spacing:-.04em;font-weight:600;margin:0}
+
+/* Projects: the existing case cards + a metric in the corner */
+.op-metric{font-size:.875rem;color:rgba(255,255,255,.62);text-align:right}
+.op-metric b{color:#fff;font-weight:600;font-size:1.05rem}
+
+/* AI: dark band with numbered rows */
+.op-ai{background:#111113;color:#EDEBE6;border-radius:24px;margin-inline:clamp(8px,1.2vw,16px);position:relative;overflow:hidden}
+.op-ai::before{content:"";position:absolute;inset:0;background:radial-gradient(50% 60% at 88% 0%,color-mix(in srgb,var(--accent) 22%,transparent),transparent 70%);pointer-events:none}
+.op-ai .wrap{position:relative}
+.op-ai .eyebrow{color:rgba(237,235,230,.6)}
+.op-ai-title{font-family:var(--f-display);font-size:clamp(2.5rem,6.4vw,5.6rem);line-height:.98;letter-spacing:-.04em;font-weight:600;margin:18px 0 clamp(36px,5vw,64px)}
+.op-ai-title span{display:block;color:rgba(237,235,230,.42)}
+.op-ai-list{list-style:none;margin:0;padding:0;border-top:1px solid rgba(255,255,255,.1)}
+.op-ai-row{display:grid;grid-template-columns:80px minmax(0,1fr) minmax(0,1.2fr);gap:16px 32px;align-items:start;padding:clamp(22px,3vw,36px) 0;border-bottom:1px solid rgba(255,255,255,.1)}
+.op-ai-row .mono{color:rgba(237,235,230,.45);padding-top:.6em}
+.op-ai-row h3{font-family:var(--f-display);font-size:clamp(1.75rem,3.4vw,3rem);line-height:1.05;letter-spacing:-.03em;font-weight:500;margin:0}
+.op-ai-row p{margin:0 0 14px;color:rgba(237,235,230,.68);font-size:var(--s1);line-height:1.5;max-width:52ch}
+.op-chips{display:flex;flex-wrap:wrap;gap:8px}
+.op-chips span{font-size:.8125rem;padding:5px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.18);color:#fff}
+
+/* About */
+.op-about-in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:clamp(32px,5vw,72px);align-items:start}
+.op-about-photo{margin:0;border-radius:calc(var(--r) * 1.6);overflow:hidden;border:1px solid var(--line);aspect-ratio:4/5;position:sticky;top:96px}
+.op-about-photo{isolation:isolate}
+.op-about-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.op-about-photo figcaption{position:absolute;left:14px;bottom:14px;padding:6px 10px;border-radius:999px;background:color-mix(in srgb,var(--paper) 82%,transparent);backdrop-filter:blur(8px);font-size:var(--s-1);color:var(--ink)}
+.op-about-lead{font-family:var(--f-display);font-size:clamp(1.75rem,3.2vw,2.75rem);line-height:1.12;letter-spacing:-.03em;font-weight:600;margin:18px 0 0}
+.op-about-lead span{color:var(--muted)}
+.op-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 32px;margin:clamp(28px,4vw,44px) 0 0;padding-top:clamp(24px,3vw,36px);border-top:1px solid var(--line)}
+.op-facts dt{font-weight:600;margin-bottom:4px}
+.op-facts dd{margin:0;color:var(--muted)}
+.op-xp{margin-top:clamp(32px,4vw,48px)}
+.op-xp ul{list-style:none;margin:16px 0 0;padding:0;border-top:1px solid var(--line)}
+.op-xp li{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) auto;gap:6px 20px;padding:14px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.op-xp li span{color:var(--muted)}
+.op-xp li .mono{font-size:var(--s-1)}
+
+/* Floating "Say hi" */
+.op-sayhi{position:fixed;right:clamp(12px,2vw,24px);bottom:clamp(12px,2vw,24px);z-index:40;display:flex;align-items:center;gap:12px;padding:8px 8px 8px 8px;border-radius:20px;background:var(--surface);border:1px solid var(--line);box-shadow:0 18px 40px -18px rgba(0,0,0,.35);text-decoration:none;color:var(--ink);transition:transform .3s cubic-bezier(.2,.8,.2,1)}
+.op-sayhi:hover{transform:translateY(-3px)}
+.op-sayhi img{width:44px;height:44px;border-radius:14px;object-fit:cover}
+.op-sayhi span{display:grid;line-height:1.2}
+.op-sayhi small{font-size:.6875rem;color:var(--muted)}
+.op-sayhi b{font-weight:600}
+.op-sayhi i{font-style:normal;font-size:.875rem;padding:9px 16px;border-radius:999px;background:var(--ink);color:var(--paper)}
+.op-sayhi.is-hidden{opacity:0;pointer-events:none;transform:translateY(12px)}
+
+@media (max-width:980px){
+  .op-hero-in,.op-about-in{grid-template-columns:minmax(0,1fr)}
+  .op-photo{max-width:420px;aspect-ratio:1/1}
+  .op-about-photo{position:relative;top:auto;max-width:420px}
+  .op-ai-row{grid-template-columns:48px minmax(0,1fr)}
+  .op-ai-row>div{grid-column:2}
+}
+@media (max-width:640px){
+  .op-facts{grid-template-columns:minmax(0,1fr)}
+  .op-xp li{grid-template-columns:minmax(0,1fr)}
+  .op-talk{display:none}
+  .op-sayhi small{display:none}
+  .op-sayhi span{display:none}
+}
