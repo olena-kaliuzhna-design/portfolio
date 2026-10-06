@@ -83,3 +83,25 @@
   .op-sayhi small{display:none}
   .op-sayhi span{display:none}
 }
+
+/* Kind words: animated cards stack */
+.op-stack{padding-bottom:0;overflow-x:clip}
+.op-stack-head{display:grid;gap:14px;text-align:center;justify-items:center}
+.op-stack-head p{margin:6px 0 0;max-width:52ch;color:var(--muted)}
+.cs-scroll{position:relative;width:100%;height:calc((var(--n) + 1) * 55vh);perspective:1000px}
+.cs-sticky{position:sticky;top:0;height:100vh;height:100svh;display:flex;align-items:center;justify-content:center;padding:88px 0 32px}
+.cs-cards{position:relative;width:min(420px,calc(100vw - 40px));height:min(540px,calc(100svh - 150px));perspective:1000px}
+.cs-card{position:absolute;inset:0;will-change:transform;backface-visibility:hidden;display:flex;flex-direction:column;justify-content:center;gap:22px;padding:clamp(24px,3vw,34px);border-radius:20px;border:1px solid var(--line);background:color-mix(in srgb,var(--surface) 96%,transparent);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);text-align:left}
+.cs-head{font-family:var(--f-display);font-size:clamp(1.25rem,2vw,1.5rem);font-weight:600;line-height:1.15;letter-spacing:-.02em}
+.cs-quote{margin:0}
+.cs-quote p{margin:0;color:var(--muted);font-size:clamp(.9375rem,1.2vw,1rem);line-height:1.6}
+.cs-who{display:flex;align-items:center;gap:14px;padding-top:18px;border-top:1px solid var(--line)}
+.cs-ava{flex:0 0 48px;width:48px;height:48px;border-radius:50%;display:grid;place-items:center;font-weight:600;color:#fff;background:var(--tone);border:1px solid var(--line)}
+.cs-who b{display:block;font-weight:600;font-size:1.0625rem;letter-spacing:-.01em}
+.cs-who small{display:block;color:var(--muted);font-size:.8125rem;line-height:1.35}
+/* reduced motion: a simple list */
+.cs-static{height:auto}
+.cs-static .cs-sticky{position:static;height:auto;display:block}
+.cs-static .cs-cards{width:auto;height:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:16px;max-width:var(--wrap);margin:0 auto;padding-inline:clamp(16px,3vw,40px)}
+.cs-static .cs-card{position:relative;inset:auto}
+@media (max-width:640px){.cs-card{gap:16px}.cs-quote p{font-size:.875rem;line-height:1.55}}
